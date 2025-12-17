@@ -128,3 +128,9 @@ module "ec2_instances" {
     environment = "develpment"
   }
 }
+
+module "s3_bucket" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-fda/aws"
+  version = "1.0.0"
+  bucket_name = "s3bucketfda20251212"
+}
